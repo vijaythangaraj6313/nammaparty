@@ -1,0 +1,136 @@
+.product-detail-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+/* --- IMPORTANT RULE 1: This defines the layout and column sizes --- */
+.product-detail-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; /* Makes the image column smaller than the info column */
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: sticky; /* Makes the image stay in place when scrolling on long pages */
+    top: 2rem;
+}
+
+.main-image-wrapper {
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    border-radius: 8px;
+    background: #fdfdfd;
+}
+
+/* --- IMPORTANT RULE 2: This makes the image responsive within its column --- */
+.main-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    aspect-ratio: 1 / 1; /* Ensures the image container is always square */
+}
+
+.product-info-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-category-tag {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.product-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+
+.price-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.current-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.quantity-selector button {
+    border: none;
+    background: #f5f5f5;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.quantity-selector span {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.add-to-cart-btn {
+    padding: 12px 30px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+}
+
+.meta-info {
+    border-top: 1px solid #eee;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+}
+
+.meta-info p {
+    margin: 0.5rem 0;
+    color: #666;
+}

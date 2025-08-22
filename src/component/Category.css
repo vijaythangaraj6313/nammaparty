@@ -1,0 +1,73 @@
+/* General container for the entire section */
+.category-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f9fa; /* A very light grey background like the image */
+}
+
+/* Title styling */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Container for each individual category item */
+.category-item {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    outline: none; /* Removes outline on focus for slider items */
+}
+
+/* The circular wrapper for the icon */
+.icon-container {
+    width: 130px;   /* Increased size */
+    height: 130px;  /* Increased size */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 5px; /* Adds a little space between the border and the image */
+    transition: border 0.3s ease;
+    
+    /* Default light grey border */
+    border: 2px solid #e0e0e0; 
+}
+
+/* Styling for the image itself */
+.category-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circle without stretching */
+    border-radius: 50%;
+}
+
+/* Style for the category name text */
+.category-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 5px;
+    text-transform: capitalize; /* Ensures consistent capitalization */
+}
+
+/* --- Active State --- */
+/* When the category-item has the 'active' class, its icon-container gets a red border */
+.category-item.active .icon-container {
+    border: 2px solid #d9534f; /* A shade of red to match the image */
+}
+
+/* Optional: Make the active category name bolder */
+.category-item.active .category-name {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Hides default slick dots if they appear */
+.slick-dots {
+    display: none !important;
+}

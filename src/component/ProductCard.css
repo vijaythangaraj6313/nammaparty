@@ -1,0 +1,127 @@
+/* src/component/ProductCard.css */
+
+.product-card {
+  background-color: #fff;
+  border-radius: 12px; /* Softer corners */
+  border: none; /* Remove the old border */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensures content respects the border-radius */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft, modern shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a hover effect to lift the card */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-container {
+  background-color: #fff;
+  padding: 16px;
+  text-align: center;
+}
+
+.product-image {
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom the image slightly on hover for a dynamic feel */
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 0 16px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ensures footer is always at the bottom */
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600; /* Bolder for better readability */
+  color: #222;
+  margin: 0 0 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.product-quantity {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0 0 16px 0;
+  flex-grow: 1; /* Pushes the footer down */
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Aligns footer to the bottom */
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* --- New Button Styles --- */
+
+.add-button {
+  background-color: #fff;
+  color: #e53935;
+  border: 2px solid #e53935; /* Thicker border */
+  border-radius: 25px; /* Pill shape */
+  padding: 8px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  background-color: #e53935;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e53935;
+  border-radius: 25px;
+  overflow: hidden; /* Keeps children within the rounded border */
+  font-weight: 700;
+}
+
+.quantity-control button {
+  background-color: transparent;
+  border: none;
+  color: #e53935;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: background-color 0.2s ease;
+}
+
+.quantity-control button:hover {
+    background-color: #ffeeee; /* Light red feedback on hover */
+}
+
+.quantity-control span {
+  padding: 6px 8px;
+  font-size: 1rem;
+  color: #222;
+}
+.product-card-link {
+  text-decoration: none; /* This removes the underline */
+  color: inherit;       /* This makes the text color the same as its parent */
+}

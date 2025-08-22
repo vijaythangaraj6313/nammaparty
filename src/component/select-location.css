@@ -1,0 +1,162 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #888;
+}
+
+.search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Important for padding */
+}
+
+.current-location-container {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.current-location-text {
+    margin-left: 15px;
+}
+
+.current-location-text h3 {
+    margin: 0 0 4px 0;
+    color: #e94e77;
+    font-size: 1rem;
+}
+
+.current-location-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.enable-button {
+    margin-left: auto;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #e94e77;
+    background-color: #fff;
+    color: #e94e77;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.location-image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.location-image {
+    max-width: 180px;
+    height: auto;
+}
+/* Add these styles to the bottom of your existing select-location.css */
+
+.search-results-container {
+  margin-top: 15px;
+  border-top: 1px solid #f0f0f0;
+  max-height: 250px; /* Limit the height of the results list */
+  overflow-y: auto; /* Add a scrollbar if results overflow */
+}
+
+.loading-text {
+  padding: 15px;
+  color: #888;
+  text-align: center;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.search-result-item:hover {
+  background-color: #f9f9f9;
+}
+
+.search-result-item .result-icon {
+  margin-right: 15px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.search-result-item .result-text h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.search-result-item .result-text p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* Make the whole current location container clickable */
+.current-location-container {
+  cursor: pointer;
+  /* (keep existing styles) */
+}

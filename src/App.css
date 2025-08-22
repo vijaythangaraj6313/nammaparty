@@ -1,0 +1,12 @@
+/* src/App.css */
+
+/* You can leave this file completely empty, 
+   or add this rule to center the text in your main content area */
+.App main {
+  text-align: center;
+}
+.App {
+  /* This is the new rule that fixes the background */
+  background-color: #ffffff; 
+  min-height: 100vh; /* This ensures the white background covers the whole page */
+}

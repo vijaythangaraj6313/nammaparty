@@ -1,0 +1,150 @@
+.about-us-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --- Top Banner Section --- */
+.about-banner {
+  background-color: #dfd1d1; /* Light green background */
+  padding: 50px 5%;
+  text-align: center;
+  /* Optional: add a subtle background pattern if you have one */
+  /* background-image: url('path/to/your/pattern.svg'); */
+}
+.breadcrumb {
+  color: #555;
+  margin-bottom: 10px;
+}
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #222;
+}
+
+/* --- Three-Step Process Section --- */
+.process-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 80px 5%;
+  flex-wrap: wrap;
+}
+.process-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  text-align: center;
+}
+.icon-circle {
+  width: 90px;
+  height: 90px;
+  background-color: #f44336; /* Darker green */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 40px;
+}
+.process-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+.process-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* --- Know More Section --- */
+.know-more-section {
+  padding: 80px 5%;
+  background-color: #fff;
+}
+.know-more-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.image-collage {
+  flex: 1;
+  position: relative;
+  min-height: 450px;
+}
+.image-collage .img-background {
+  width: 70%;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.image-collage .img-foreground {
+  width: 60%;
+  border-radius: 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 8px solid #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.text-content {
+  flex: 1;
+}
+.section-heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.section-paragraph {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+.features-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  color: #555;
+}
+.check-icon {
+  color: #f44336;
+  font-size: 20px;
+}
+.contact-button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+.contact-button:hover {
+  background-color: #f44336;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .know-more-container {
+    flex-direction: column;
+  }
+  .image-collage {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}

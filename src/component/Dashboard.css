@@ -1,0 +1,178 @@
+/* General Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 2rem auto;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  align-self: flex-start; /* Makes sidebar stick to the top */
+}
+
+.dashboard-content {
+  flex-grow: 1;
+}
+
+/* Banner Styles */
+.dashboard-banner {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.dashboard-banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-top: 0.5rem;
+}
+
+/* Sidebar Navigation */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #495057;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sidebar-link:hover {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+.sidebar-link.active {
+  background-color: #28a745;
+  color: white;
+}
+
+.sidebar-icon {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.logout-btn {
+  margin-top: 1rem;
+  color: #dc3545; /* Red color for logout */
+}
+
+.logout-btn:hover {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Main Content Area */
+.profile-header h3 {
+  color: #6c757d;
+  font-weight: 400;
+}
+
+.profile-header h2 {
+  font-size: 1.8rem;
+  color: #212529;
+  margin-top: 0.25rem;
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #343a40; /* Dark background */
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card-icon-wrapper {
+  margin: 0 auto 1rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.new-orders { background-color: #ffc107; } /* Yellow */
+.delivery-completed { background-color: #fd7e14; } /* Orange */
+.support-tickets { background-color: #6f42c1; } /* Purple */
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card .card-stat {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* Information Sections */
+.info-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+.info-card p {
+  color: #495057;
+  line-height: 1.8;
+}
+
+.info-card p strong {
+  color: #212529;
+}

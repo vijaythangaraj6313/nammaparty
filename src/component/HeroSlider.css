@@ -1,0 +1,109 @@
+.carousel-wrapper {
+  background-color: #f8f9f5;
+  padding: 40px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.carousel-slider {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.carousel-slide-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 0 8%;
+}
+
+.slide-text-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.organic-tag {
+  background-color: #d12e2e;
+  color: #d1d5cf;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.slide-headline {
+  font-family: 'Arial', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  color: #222;
+  margin: 0 0 25px 0;
+  line-height: 1.2;
+}
+
+.buy-now-btn {
+  background-color: #bd2a34;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-btn:hover {
+  background-color: #bd2a34;
+}
+
+.slide-image-content {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.slide-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sale-sticker {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 120px;
+  height: 120px;
+  background-color: #bd2a34;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  clip-path: polygon(0% 25%, 10% 0%, 25% 10%, 40% 0, 55% 10%, 70% 0, 85% 10%, 100% 0, 100% 75%, 90% 100%, 75% 90%, 60% 100%, 45% 90%, 30% 100%, 15% 90%, 0 100%);
+}
+
+.sale-text {
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.sale-percent {
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.sale-off {
+  font-size: 14px;
+  line-height: 1.1;
+}

@@ -1,0 +1,37 @@
+/* src/component/ProductGrid.css */
+
+.product-grid-container {
+  /* Give the section a light background to make cards pop */
+  background-color: #f9fafb;
+  padding: 40px 5%; /* More vertical and horizontal space */
+}
+
+.grid-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 2.5rem; /* Larger, more impactful title */
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 0 0 30px 0;
+  text-align: left;
+  position: relative;
+  display: inline-block; /* Allows the pseudo-element to be positioned correctly */
+}
+
+/* Adds a decorative red underline to the title */
+.grid-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background-color: #e53935; /* Primary Red */
+  border-radius: 2px;
+}
+
+.product-grid {
+  display: grid;
+  /* Adjust minmax for slightly larger cards and better spacing */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px; /* Increased gap for a cleaner look */
+}

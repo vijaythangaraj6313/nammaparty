@@ -1,0 +1,28 @@
+/* src/index.css */
+
+body {
+  /* This is the most important rule. It removes the white space around the page. */
+  margin: 0;
+
+  /* This sets the background color for your entire app */
+  background-color: #282c34;
+
+  /* A standard font for the app */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}/* src/index.css */
+
+body {
+  /* This is the most important rule. It removes the white space around the page. */
+  margin: 0;
+
+  /* --- THIS IS THE FIX --- */
+  /* Change this color from the dark one to white */
+  background-color: #ffffff;
+
+  /* This new rule prevents horizontal scrolling which shows the empty space */
+  overflow-x: hidden;
+  /* ----------------------- */
+
+  /* A standard font for the app */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}

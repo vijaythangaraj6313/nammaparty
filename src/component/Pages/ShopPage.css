@@ -1,0 +1,64 @@
+.shop-page-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 2rem;
+}
+
+.shop-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.shop-main-content {
+    flex-grow: 1;
+}
+
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.sort-dropdown {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.loading-container {
+    text-align: center;
+    padding: 4rem;
+    font-size: 1.5rem;
+}
+
+/* For ProductGrid.css to work correctly inside */
+.product-grid-container .grid-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.product-grid-container .grid-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #d9534f; /* Red accent color */
+}
+
+.no-products-found {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}

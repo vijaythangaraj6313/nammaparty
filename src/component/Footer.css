@@ -1,0 +1,59 @@
+.site-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 50px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+  gap: 40px; /* Adds space between columns when they wrap */
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 280px; /* Ensures columns don't get too squished before wrapping */
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 15px 0;
+}
+
+.footer-about,
+.contact-address,
+.contact-phone {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.contact-address {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #ccc;
+  font-size: 26px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff; /* Or use a brand color like #e53935 */
+  transform: translateY(-3px);
+}

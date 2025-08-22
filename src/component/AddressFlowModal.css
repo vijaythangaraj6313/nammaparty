@@ -1,0 +1,161 @@
+/* Styles for the main modal and its children */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Location Picker Styles */
+.location-title, .address-form-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.address-search-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.map-overlay-text {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.location-actions {
+  text-align: center;
+}
+
+.search-location-btn {
+  padding: 12px 20px;
+  border: 1px solid #e91e63;
+  color: #e91e63;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.selected-address-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.selected-address-card h4 {
+  margin: 0 0 0.5rem 0;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 15px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* Address Form Styles */
+.address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.saved-location-display {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 4px;
+  position: relative;
+}
+
+.change-location-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #e91e63;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.address-form input {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.address-label-group button {
+  padding: 8px 15px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.address-label-group button.active {
+  background-color: #e91e63;
+  color: white;
+  border-color: #e91e63;
+}
+
+.save-address-btn {
+  padding: 15px;
+  background-color: #ccc;
+  color: #555;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
