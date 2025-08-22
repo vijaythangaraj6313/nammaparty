@@ -16,6 +16,8 @@ import ContactUs from './component/ContactUs.jsx';
 import Dashboard from './component/Dashboard.jsx';
 import ShopPage from './Pages/ShopPage.jsx';
 import ProductDetailPage from './pages/ProductDetailPage.jsx';
+import OrderSummary from './Pages/OrderSummary.jsx';
+
 
 // --- CHANGE 1: Import the new modal and the AuthProvider ---
 import AddressFlowModal from './component/AddressFlowModal.jsx';
@@ -119,6 +121,8 @@ const AppContent = () => {
         <Route path="/dashboard" element={<Dashboard handleLogout={handleLogout} />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/product/:productId" element={<ProductDetailPage />} />
+                    <Route path="/order-summary" element={<OrderSummary />} />
+
       </Routes>
 
       {/* --- CHANGE 4: Pass the new handler as a prop to CartSidebar --- */}

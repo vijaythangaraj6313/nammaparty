@@ -99,3 +99,66 @@
   font-size: 1rem;
   cursor: pointer;
 }
+/* Add these new styles at the end */
+.cart-footer .address-summary {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.cart-footer .address-display-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.cart-footer .change-address-btn {
+  background: none;
+  border: none;
+  color: #e50077; /* Your theme's primary color */
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cart-footer .address-details {
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  border: 1px solid #e0e0e0;
+}
+
+.cart-footer .address-details strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.cart-footer .address-details p {
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+.proceed-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #e50077;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.proceed-btn:hover {
+    background-color: #c20066;
+}
