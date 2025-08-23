@@ -21,6 +21,10 @@ import ProductDetailPage from './pages/ProductDetailPage.jsx';
 import AddressFlowModal from './component/AddressFlowModal.jsx';
 import { AuthProvider, useAuth } from './context/AuthContext.jsx'; // Assuming your AuthContext is in this path
 import { CartProvider } from './context/CartContext.jsx';
+import OrderSummary from './component/OrderSummary';
+import PaymentPage from './component/PaymentPage'; // <-- Import the new component
+
+
 import './App.css';
 
 const HomePage = () => (
@@ -119,6 +123,10 @@ const AppContent = () => {
         <Route path="/dashboard" element={<Dashboard handleLogout={handleLogout} />} />
         <Route path="/shop" element={<ShopPage />} />
         <Route path="/product/:productId" element={<ProductDetailPage />} />
+                <Route path="/order-summary" element={<OrderSummary />} />
+                 <Route path="/payment" element={<PaymentPage />} />
+                
+
       </Routes>
 
       {/* --- CHANGE 4: Pass the new handler as a prop to CartSidebar --- */}

@@ -1,0 +1,124 @@
+/* src/component/OrderSummary.css */
+
+.order-summary-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.summary-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.order-section {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.order-section h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.item-unit-info {
+    font-size: 0.9em;
+    color: #666;
+    margin: 4px 0 0;
+}
+
+.item-pricing {
+    text-align: right;
+}
+
+.current-price {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 8px;
+    font-size: 0.9em;
+}
+
+.bill-summary .bill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.bill-summary .total-bill {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.bill-summary hr {
+    border: none;
+    border-top: 1px dashed #ccc;
+    margin: 15px 0;
+}
+
+.saved-amount {
+    background-color: #e0f8e0;
+    color: #2a8a2a;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.order-details p {
+    margin: 8px 0;
+}
+
+.confirm-order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #e84a5f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirm-order-btn:hover {
+    background-color: #d73a4f;
+}

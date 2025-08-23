@@ -1,5 +1,9 @@
+// src/component/AddressFlowModal.js (Updated Version)
+
 import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext'; // Assuming you have an AuthContext
+// --- CHANGE 1: Import useNavigate ---
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import { db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
@@ -8,9 +12,11 @@ import AddressForm from './AddressForm';
 import './AddressFlowModal.css';
 
 const AddressFlowModal = ({ isOpen, onClose }) => {
-    const { currentUser } = useAuth(); // Get the current logged-in user
-    const [step, setStep] = useState('map'); // 'map' or 'details'
+    const { currentUser } = useAuth();
+    const [step, setStep] = useState('map');
     const [selectedLocation, setSelectedLocation] = useState(null);
+    // --- CHANGE 2: Initialize navigate ---
+    const navigate = useNavigate();
 
     const handleLocationConfirm = (location) => {
         setSelectedLocation(location);
@@ -18,29 +24,27 @@ const AddressFlowModal = ({ isOpen, onClose }) => {
     };
 
     const handleSaveAddress = async (addressDetails) => {
-        if (!currentUser) {
-            alert("Please log in to save an address.");
-            return;
-        }
-
-        if (!selectedLocation) {
-            alert("Something went wrong. Please select a location again.");
+        if (!currentUser || !selectedLocation) {
+            alert("Please log in and select a location.");
             return;
         }
 
         const fullAddress = {
             userId: currentUser.uid,
-            ...selectedLocation, // { lat, lng, addressString }
-            ...addressDetails, // { house, building, landmark, label, receiverName, receiverPhone }
+            ...selectedLocation,
+            ...addressDetails,
             createdAt: new Date(),
         };
 
         try {
-            // Store the address in a subcollection 'addresses' under the user's document
-            const docRef = await addDoc(collection(db, 'users', currentUser.uid, 'addresses'), fullAddress);
-            console.log("Address saved with ID: ", docRef.id);
-            alert("Address saved successfully!");
-            onClose(); // Close the modal on success
+            await addDoc(collection(db, 'users', currentUser.uid, 'addresses'), fullAddress);
+            console.log("Address saved successfully!");
+            
+            onClose(); // Close the modal
+
+            // --- CHANGE 3: Navigate to Order Summary with the address state ---
+            navigate('/order-summary', { state: { address: fullAddress } });
+
         } catch (error) {
             console.error("Error saving address: ", error);
             alert("Failed to save address. Please try again.");
@@ -59,14 +63,12 @@ const AddressFlowModal = ({ isOpen, onClose }) => {
         <div className="modal-backdrop" onClick={handleClose}>
             <div className="modal-content" onClick={e => e.stopPropagation()}>
                 <button className="modal-close-btn" onClick={handleClose}>×</button>
-                {step === 'map' && (
-                    <LocationPicker onConfirm={handleLocationConfirm} />
-                )}
+                {step === 'map' && <LocationPicker onConfirm={handleLocationConfirm} />}
                 {step === 'details' && (
                     <AddressForm 
                         savedLocation={selectedLocation} 
                         onSave={handleSaveAddress}
-                        onChangeLocation={() => setStep('map')} // Allow user to go back
+                        onChangeLocation={() => setStep('map')}
                     />
                 )}
             </div>
